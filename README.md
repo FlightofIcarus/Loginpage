@@ -5,6 +5,7 @@ Desafio proposto pela Rocketseat em seu programa de ensino Discover e que pode s
 
 A página é uma tela de login feita com HTML e CSS, além de implementação minha de uma função JS para ativação do "ícone olho", que serve para mostrar a senha enquanto pressionado.
 
+A página não é integrada com nenhuma API, de forma que tentar fazer login com qualquer informação resultará num erro de página não encontrada.
 
 
 
