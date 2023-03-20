@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login desafio">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Desafio - Login Form</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <section id="login-area">
+        <main id="autetication-area">
+            <h1>Faça seu login</h1>
+            <p>Entre com suas informações de cadastro.</p>
+            <form action="login.html" method="get">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>    
+                
+                <label for="senha">Senha</label>
+                <span id="senha-area">
+                    <input type="password" name="password" id="senha" placeholder="Digite sua senha" required>
+                    <img src="/images/eye.svg" alt="Ícone mostrar senha" onmousedown="viewPassword()" onmouseup="hidePassword()">
+                </span>
+                
+                <span id="config-senha-area">
+                    <label id="lembrar"><input type="checkbox" name="lembreme"> Lembre-me<span id="checkarea"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="#473404" d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></span></label>
+                    
+                    <a href="#">Esqueci minha senha</a>
+                </span>
+                <input type="submit" value="Entrar">
+                <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+
+            </form>
+        </main>
+    </section>
+
+    <section id="bg-img"></section>
+    <script src="JS/main.js"></script>
+</body>
+</html>

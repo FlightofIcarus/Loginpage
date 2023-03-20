@@ -1,0 +1,245 @@
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+body{
+display: flex;
+height: 100vh;
+width: 100vw;
+background: var(--background);   
+}
+
+#login-area{
+    width: 50vw;
+    height: 100vh;
+    background: url(../images/logo.svg) no-repeat left top;
+    margin: 40px;
+    padding: 126px 74px;
+
+}
+
+#bg-img{
+background: url(../images/side-image-2x.jpg) no-repeat bottom;
+background-size: cover;
+width: 50vw;
+height: 100vh;
+}
+
+#autetication-area{
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-base);
+  background: var(--form-background);
+  height: 512px;
+  width: 572px;
+  border-radius: 4px;
+  padding: 55px 119px;
+  margin: 0 auto;
+}
+
+#autetication-area h1{
+  background: url(../images/log-in.svg) no-repeat center left;
+  padding-left: 34px;
+  color: var(--text-title);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+#autetication-area p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 5px;
+}
+
+form{
+  margin-top: 27px;
+
+} 
+
+label, input{
+  display: block;
+}
+
+#senha-area{
+  display: block;
+  position: relative;
+}
+
+#senha-area img{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+#show{
+  position: absolute;
+  top: 10px;
+  left: 37px;
+  display: block;
+  width: 260px;
+  opacity: 1;
+  overflow: hidden;
+  height: 25px;
+}
+
+#email, #senha{
+  width: 334px;
+  height: 44px;
+  background: var(--form-background);
+  border-radius: 4px;
+  border: 1.5px solid var(--text-base);
+  padding: 14px 37px;
+  margin: 5px 0 20px 0;
+  color: var(--text-title);
+}
+
+#email:focus{
+  border: 1.5px solid var(--primary-color);
+  box-shadow: 0px 0px 1px 3px #ffde88;
+  background: url(../images/mail-focus.svg) no-repeat center left;
+  background-position-x: 12px;
+}
+
+#senha:focus{
+  border: 1.5px solid var(--primary-color);
+  box-shadow: 0px 0px 1px 3px #ffde88;
+  background: url(../images/lock-focus.svg) no-repeat center left;
+  background-position-x: 12px;
+}
+
+#email{
+  background: url(../images/mail.svg) no-repeat center left;
+  background-position-x: 12px;
+}
+
+#senha{
+  background: url(../images/lock.svg) no-repeat center left;
+  background-position-x: 12px;
+}
+
+#email::placeholder, #senha::placeholder{
+  font-size: 14px;
+  color: var(--text-base);
+  background-color: var(--form-background);
+}
+
+#config-senha-area{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#lembrar{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+#checkarea{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--form-background);
+  border-radius: 4px;
+  border: 1px solid var(--text-base);
+  position: absolute;
+  top: 3px;
+  left: 0;
+  z-index: 0;
+}
+svg{
+opacity: 0;
+}
+
+#lembrar input:checked ~ #checkarea>svg {
+  opacity: 1;
+}
+
+#lembrar input:checked ~ #checkarea {
+  background: var(--primary-color);
+}
+
+a{
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 600;
+  line-height: 21px;
+}
+
+form p{
+  color: var(--primary-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+input[type="submit"] {
+margin: 14px auto 20px auto;
+background: var(--primary-color);
+width: 334px;
+height: 51px;
+border-radius: 4px;
+color: #473404;
+font-size: 18px;
+line-height: 27px;
+font-weight: 600;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+@media (max-width: 820px) {
+  body{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background: var(--background);   
+    margin: 0;
+    padding: 0;
+    }
+ 
+  #login-area{
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/logo.svg) no-repeat left top;
+    margin: 40px 0 0 10px;
+    padding: 40px 0;
+}
+
+#autetication-area{
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-base);
+  background: var(--background);
+  border-radius: 0px;
+  padding: 55px 20px;
+  margin: 0 auto;
+  width: 334px;
+}
+
+#bg-img{
+  display: none;
+  }
+}
